@@ -1,0 +1,28 @@
+{
+  "name": "naming",
+  "version": "0.0.1",
+  "description": "naming case convertion",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "naming",
+    "case",
+    "convention",
+    "camel",
+    "pascal",
+    "snake",
+    "kebab",
+    "caps"
+  ],
+  "author": {
+    "name": "hujinglin",
+    "email": "hujinglin87@126.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hujinglin/naming.git"
+  },
+  "license": "MIT"
+}
