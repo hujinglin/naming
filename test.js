@@ -1,8 +1,6 @@
-// temp
-
 var naming = require('./index')
 
-var str = '__$apple-Banana_cake__'
+var str = '__$$apple-bananaCherry_durian2012__'
 
 console.log(naming(str, 'camel'))
 console.log(naming(str, 'pascal'))
