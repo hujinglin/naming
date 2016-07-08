@@ -1,9 +1,12 @@
-var naming = function (target, type) {
+var naming = function (target, type, deep) {
   if (typeof target === 'string') {
     return covertion(target, type)
   } else if (typeof target === 'object') {
     var obj = {}
     for (var key in target) {
+      if (typeof target[key] === 'object' && deep) {
+        target[key] = naming(target[key], type, deep)
+      }
       obj[covertion(key, type)] = target[key]
     }
     return obj

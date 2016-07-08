@@ -12,7 +12,7 @@ npm install naming
 ``` javascript
 var naming = require('naming')
 
-// parse string
+/** parse string **/
 var str = 'apple-bananaCherry_durian'
 naming(str, 'camel')    // appleBananaCakeDurian
 naming(str, 'pascal')   // AppleBananaCakeDurian
@@ -21,9 +21,20 @@ naming(str, 'kebab')    // apple-banana-cherry-durian
 naming(str, 'caps')     // APPLE_BANANA_CHERRY_DURIAN
 naming.disperse(str)    // ['apple', 'banana', 'cherry', 'durian']
 
-// parse object
+/** parse object **/
 var obj = { red_apple: 0, yellow_banana: 1, green_cake: 2 }
 naming(obj, 'camel')    // { redApple: 0, yellowBanana: 1, greenCake: 2 }
+
+/** parse object deeply **/
+var obj = {
+  apple_list: {
+    red_apple: 0,
+    green_apple: 1
+  }, 
+  yellow_banana: 2
+}
+naming(obj, 'camel', true)
+// => { appleList: { redApple: 0, greenApple: 1 }, yellowBanana: 2 }
 ```
 
 __Note__

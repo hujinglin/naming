@@ -17,3 +17,29 @@ console.log(naming(obj, 'pascal'))
 console.log(naming(obj, 'snake'))
 console.log(naming(obj, 'kebab'))
 console.log(naming(obj, 'caps'))
+
+var obj = { 
+  big_apple: 'apple', 
+  big_banna: {
+    small_banana_01: ['banana'], small_banana_02: 'banana'
+  },
+  big_cake: {
+    small_cake_01: 'cake',
+    small_cake_02: {
+      tiny_cake_01: 'cake',
+      tiny_cake_02: function cake () {
+
+      }
+    } 
+  }
+}
+
+console.log(naming(obj, 'camel', true))
+console.log(naming(obj, 'pascal', true))
+console.log(naming(obj, 'snake', true))
+console.log(naming(obj, 'kebab', true))
+console.log(naming(obj, 'caps', true))
+
+
+
+
