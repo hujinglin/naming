@@ -1,6 +1,6 @@
 {
   "name": "naming",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "naming case convertion",
   "main": "index.js",
   "scripts": {

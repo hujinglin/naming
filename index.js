@@ -34,7 +34,7 @@ function participle (str) {
     var mat = seg.match(/([A-Z]*?[a-z]+)|([0-9]+)|([^\w]+)/g)
     mat ? words = words.concat(mat) : words.push(seg)
   })
-  words.forEach((word, index) => {
+  words.forEach(function (word, index) {
     words[index] = word.toLowerCase()
   })
   return {
@@ -49,7 +49,7 @@ function covertion (str, type) {
   var name = ''
   switch (type) {
     case 'camel':
-      parts.words.forEach((word, index) => {
+      parts.words.forEach(function (word, index) {
         if (index === 0) {
           name += word
         } else if (index === 1 && /\$+$/.test(parts.words[0])) {
@@ -60,7 +60,7 @@ function covertion (str, type) {
       })
       break
     case 'pascal':
-      parts.words.forEach((word) => {
+      parts.words.forEach(function (word) {
         name += word[0].toUpperCase() + word.slice(1)
       })
       break
