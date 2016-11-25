@@ -2,6 +2,8 @@ var naming = require('./index')
 
 var str = '__$$apple-bananaCherry_durian2012__'
 
+// var str = 'CSApeed'
+
 console.log(naming(str, 'camel'))
 console.log(naming(str, 'pascal'))
 console.log(naming(str, 'snake'))

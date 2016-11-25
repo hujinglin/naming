@@ -31,7 +31,7 @@ function participle (str) {
   var _end = endMat ? endMat[0] : ''
   str = str.replace(/(^_+)|(_+$)/g, '')
   str.split(/_+|-+/).forEach(function (seg) {
-    var mat = seg.match(/([A-Z]*?[a-z]+)|([0-9]+)|([^\w]+)/g)
+    var mat = seg.match(/([A-Z]?[a-z]+)|([A-Z]+?)|([0-9]+)|([^\w]+)/g)
     mat ? words = words.concat(mat) : words.push(seg)
   })
   words.forEach(function (word, index) {
